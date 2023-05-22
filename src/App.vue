@@ -2,14 +2,16 @@
 import appHeader from "./components/appHeader.vue";
 import mainBox from "./components/mainBox.vue";
 import numberCard from "./components/numberCard.vue";
-import axios from "../node_modules/axios";
-import { store } from "../store";
+import selectSection from "./components/selectSection.vue";
+import axios from "axios";
+import { store } from "./store";
 
 export default {
   components: {
     appHeader,
     mainBox,
     numberCard,
+    selectSection,
   },
 
   data() {
@@ -28,6 +30,7 @@ export default {
 
 <template>
   <appHeader />
+  <selectSection />
   <numberCard />
   <mainBox />
 </template>
