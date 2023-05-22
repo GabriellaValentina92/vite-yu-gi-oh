@@ -14,6 +14,7 @@
 .container {
   display: flex;
   align-items: center;
+  background-color: white;
 
   img {
     width: 10%;

@@ -10,6 +10,26 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <div class="container">
+    <select name="" id="optionsCard">
+      <option value="">Alien</option>
+      <option value="">Dragon</option>
+      <option value="">Water</option>
+    </select>
+  </div>
+</template>
 
-<style></style>
+<style lang="scss" scoped>
+@use "../assets/style/partial/variables.scss" as *;
+
+.container {
+  @include container-size;
+
+  #optionsCard {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+  }
+}
+</style>

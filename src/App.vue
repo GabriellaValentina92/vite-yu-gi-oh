@@ -30,11 +30,17 @@ export default {
 
 <template>
   <appHeader />
-  <selectSection />
-  <numberCard />
-  <mainBox />
+  <div class="container">
+    <selectSection />
+    <numberCard />
+    <mainBox />
+  </div>
 </template>
 
 <style lang="scss">
 @use "../src/assets/style/general.scss";
+
+.container {
+  background-color: rgb(245, 154, 8);
+}
 </style>
