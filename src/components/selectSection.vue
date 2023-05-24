@@ -7,15 +7,31 @@ export default {
       store,
     };
   },
+
+  methods: {
+    emitSearchEvent() {
+      this.$emit("performSearch");
+    },
+  },
 };
 </script>
 
 <template>
   <div class="container">
-    <select name="" id="optionsCard">
-      <option value="">Alien</option>
-      <option value="">Dragon</option>
-      <option value="">Water</option>
+    <select
+      name=""
+      id="optionsCard"
+      v-model="store.archetypeText"
+      @change="emitSearchEvent"
+    >
+      <option value="">Select Archetype</option>
+      <option
+        v-for="archetype in store.archetypesList"
+        :key="archetype.archetype_name"
+        :value="archetype.archetype_name"
+      >
+        {{ archetype.archetype_name }}
+      </option>
     </select>
   </div>
 </template>
