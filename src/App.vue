@@ -30,7 +30,7 @@ export default {
             archetype: this.store.archetypeText,
           },
         })
-        .then((response) => (this.store.cardList = response.data.data));
+        .then((response) => (this.store.listCard = response.data.data));
     },
   },
 
